@@ -3,11 +3,13 @@
  */
 import React, {Component} from 'react';
 import {Text, StyleSheet, View,Button} from 'react-native';
+var Globals=require('../logic/Globals');
 export default class YellowScreen extends Component {
     render() {
+        console.log('render man hinh vang');
         return (
-            <View style={{backgroundColor:'yellow', flex: 1}}>
-                <Button onPress={this.props.onPress} title={this.props.propsPass.title}></Button>
+            <View style={{backgroundColor:'yellow', flex: 1, justifyContent: 'center'}}>
+                <Button onPress={this.props.onPress} title={Globals.title}></Button>
             </View>
         );
     }
