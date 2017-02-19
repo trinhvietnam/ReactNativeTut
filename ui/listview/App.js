@@ -10,12 +10,13 @@ export default class App extends Component{
             return r1!=r2;
         }});
     }
+    URL='http://58a98a0207165e12007cb032.mockapi.io/json/Subject';
+
     getListData(){
-        var results=[];
-        for (var i = 0; i < 100; i++) {
-            results.push({tenGiangVien:'Mr. '+i,tenKhoaHoc:'Lập trình '+i});
-        }
-        return results;
+
+        var data=fetch(this.URL);
+        console.log(data);
+        return [];
     }
     render(){
         return(
@@ -26,7 +27,7 @@ export default class App extends Component{
                 }
                 renderRow={(rowData)=>{
                     return (
-                        <Text>{rowData.tenKhoaHoc}</Text>
+                        <Text>{rowData.id}</Text>
                     )
                 }}
                 >
