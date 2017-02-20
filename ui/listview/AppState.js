@@ -18,11 +18,9 @@ export default class App extends Component {
     }
 
     renderRow(rowData) {
-        var _self=this;
-
         return (
             <View style={{padding: 10}}>
-                <TouchableOpacity onPress={()=>{_self.rowPressed(rowData)}}>
+                <TouchableOpacity onPress={()=>{this.rowPressed(rowData)}}>
                     <Text>{rowData.id}</Text>
                     <Text>{rowData.imageUrl}</Text>
                 </TouchableOpacity>
